@@ -23,8 +23,8 @@ export default function Navbar() {
             </li>
           ))}
           <li>
-            <a href="#contact" className="btn btn--primary btn--sm nav__cta">
-              <span className="nav__cta-icon" aria-hidden>💬</span>
+            <a href="#contact" className="btn btn--primary btn--sm nav__cta nav__cta-icon nav__cta-icon--free-counselling nav__cta-icon--free-counselling-text">
+              <span className="nav__cta-icon" aria-hidden></span>
               Free Counselling
             </a>
           </li>

@@ -25,7 +25,7 @@ function TestimonialCard({ quote, name, role, initial }) {
 }
 
 export default function Testimonials() {
-  const ref = useScrollReveal({ staggerChildren: 80 });
+  const ref = useScrollReveal({ staggerChildren: 80, threshold: 0.05, rootMargin: '0px 0px -20px 0px' });
 
   return (
     <section id="testimonials" className="section section--cream">

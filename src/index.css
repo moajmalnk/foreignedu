@@ -291,3 +291,6 @@ ul { list-style: none; }
 .stagger-children > *:nth-child(4) { transition-delay: 240ms; }
 .stagger-children > *:nth-child(5) { transition-delay: 320ms; }
 .stagger-children > *:nth-child(6) { transition-delay: 400ms; }
+@media (prefers-reduced-motion: reduce) {
+  .stagger-children > * { opacity: 1; transform: none; transition: none; }
+}
