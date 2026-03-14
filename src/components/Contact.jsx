@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import useScrollReveal from '../hooks/useScrollReveal';
+import CustomSelect from './CustomSelect';
 import { CONTACT_ITEMS, DESTINATIONS } from '../constants/data';
 
 const INITIAL_FORM = {
@@ -60,15 +61,17 @@ export default function Contact() {
             <p className="section-header__sub">
               Reach out for a free counselling session. We&apos;ll help you find the right programme and destination.
             </p>
-            {CONTACT_ITEMS.map((item, i) => (
-              <div key={i} className="contact__item">
-                <div className="contact__icon">{item.icon}</div>
-                <div>
-                  <strong>{item.label}</strong>
-                  <span>{item.detail}</span>
+            <div className="contact__items-grid">
+              {CONTACT_ITEMS.map((item, i) => (
+                <div key={i} className="contact__item">
+                  <div className="contact__icon">{item.icon}</div>
+                  <div>
+                    <strong>{item.label}</strong>
+                    <span>{item.detail}</span>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
           <div className="contact__form-panel">
             <h3 className="contact__form-title">Request Free Counselling</h3>
@@ -126,19 +129,17 @@ export default function Contact() {
                 </div>
               </div>
               <div className="contact__field">
-                <label htmlFor="destination">Preferred Destination</label>
-                <select
+                <label id="destination-label" htmlFor="destination">Preferred Destination</label>
+                <CustomSelect
                   id="destination"
                   name="destination"
                   value={formData.destination}
                   onChange={handleChange}
+                  placeholder="Select a country"
+                  options={DESTINATIONS.map((d) => ({ value: d.name, label: d.name }))}
                   className={errors.destination ? 'input-error' : ''}
-                >
-                  <option value="">Select a country</option>
-                  {DESTINATIONS.map((d) => (
-                    <option key={d.id} value={d.name}>{d.name}</option>
-                  ))}
-                </select>
+                  aria-invalid={errors.destination}
+                />
               </div>
               <div className="contact__field">
                 <label htmlFor="course">Course / Programme</label>

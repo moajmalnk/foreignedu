@@ -1,10 +1,15 @@
 import useScrollReveal from '../hooks/useScrollReveal';
 import { DESTINATIONS } from '../constants/data';
 
-function DestinationCard({ flag, name, highlight, pillBg, pillColor, description, bgColor, learnMore, index }) {
+function DestinationCard({ flag, name, highlight, pillBg, pillColor, description, image, bgColor, learnMore, index }) {
   return (
     <a href={learnMore} className="card card--destination">
-      <div className="dest-card__visual" style={{ background: bgColor }}>
+      <div
+        className="dest-card__visual"
+        style={{
+          background: image ? `linear-gradient(to bottom, rgba(0,0,0,.3), rgba(0,0,0,.4)), url(${image}) center/cover` : bgColor,
+        }}
+      >
         <span className="dest-card__bg-text" aria-hidden>{name}</span>
         <span className="dest-card__flag" role="img" aria-label={name} style={{ animationDelay: `${index * 0.5}s` }}>
           {flag}

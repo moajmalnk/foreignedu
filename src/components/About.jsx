@@ -30,7 +30,7 @@ export default function About() {
     <section id="about" className="section section--white">
       <div className="container">
         <div className="about grid-split">
-          <div className="about__visual">
+          <div className="about__visual" style={{ backgroundImage: 'linear-gradient(180deg, rgba(252,247,234,.9) 0%, var(--cream-100) 100%), url(/student-first%20expertise.avif)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
             <span className="about__ghost" aria-hidden>Navigate Your Future</span>
             <div className="about__metrics grid-2 stagger-children" ref={metricRef}>
               <MetricCard

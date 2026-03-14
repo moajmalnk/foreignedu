@@ -5,7 +5,7 @@ export default function GeorgiaMedical() {
   const panelRef = useScrollReveal({ direction: 'right', threshold: 0.15 });
 
   return (
-    <section id="georgia" className="section section--blue">
+    <section id="georgia" className="section section--blue georgia-section" style={{ backgroundImage: 'linear-gradient(135deg, rgba(26,75,140,.95) 0%, rgba(26,75,140,.85) 100%), url(/georgia.avif)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
       <div className="container">
         <div className="georgia grid-split--wide">
           <div className="georgia__left">
@@ -33,7 +33,7 @@ export default function GeorgiaMedical() {
               ))}
             </div>
           </div>
-          <div className="georgia__right card card--glass" ref={panelRef}>
+          <div className="georgia__right card card--glass georgia__panel-img" ref={panelRef}>
             <div className="georgia__stat-grid">
               {GEORGIA_STATS.map((stat) => (
                 <div key={stat.label} className="georgia__stat">

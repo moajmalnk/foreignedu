@@ -1,3 +1,22 @@
+// Site branding & contact
+export const SITE = {
+  name: 'Foreign Education Consultancy',
+  logo: '/favicon.png',
+  tagline: 'Expert guidance for global education. Specializing in MBBS and Nursing program placements in Georgia, UK, Malta, and Latvia.',
+  copyright: '© 2026 Foreign Education Consultancy. All Rights Reserved.',
+  phone: '+44 20 7946 0000',
+  email: 'info@foreignedu.co',
+  emails: {
+    general: 'info@foreignedu.co',
+    intekhab: 'intekhab@foreignedu.co',
+  },
+  addresses: [
+    { label: 'London Hub', detail: '15 Wigmore St, Marylebone', line2: 'London W1U 1PF, United Kingdom' },
+    { label: 'Tbilisi Operations', detail: 'MBBS & Nursing Specialists' },
+  ],
+  whatsapp: '442079460000',
+};
+
 export const NAV_LINKS = [
   { label: 'Services', href: '#services' },
   { label: 'Destinations', href: '#destinations' },
@@ -55,6 +74,7 @@ export const DESTINATIONS = [
   {
     id: '1',
     flag: '🇬🇧',
+    image: '/united%20kingdom.avif',
     name: 'United Kingdom',
     highlight: 'World-Class Universities',
     pillBg: 'var(--blue-50)',
@@ -66,6 +86,7 @@ export const DESTINATIONS = [
   {
     id: '2',
     flag: '🇲🇹',
+    image: '/malta.avif',
     name: 'Malta',
     highlight: 'Sunny Schengen Gateway',
     pillBg: 'var(--green-50)',
@@ -77,6 +98,7 @@ export const DESTINATIONS = [
   {
     id: '3',
     flag: '🇱🇻',
+    image: '/latvia.avif',
     name: 'Latvia',
     highlight: 'From ₹3 Lakhs Tuition',
     pillBg: 'var(--cream-200)',
@@ -88,6 +110,7 @@ export const DESTINATIONS = [
   {
     id: '4',
     flag: '🇬🇪',
+    image: '/georgia.avif',
     name: 'Georgia',
     highlight: 'MBBS & Nursing Hub',
     pillBg: 'var(--red-50)',
@@ -167,9 +190,10 @@ export const GEORGIA_STATS = [
 ];
 
 export const CONTACT_ITEMS = [
-  { icon: '📧', label: 'Email', detail: 'hello@foreignedu.com' },
-  { icon: '📞', label: 'Phone', detail: '+44 20 7946 0958' },
-  { icon: '📍', label: 'London Office', detail: '42 Education Square, London EC1A 1BB, UK' },
-  { icon: '📍', label: 'Tbilisi Office', detail: '15 Rustaveli Avenue, Tbilisi 0108, Georgia' },
+  { icon: '📧', label: 'Email', detail: 'info@foreignedu.co' },
+  { icon: '📞', label: 'Phone', detail: '+44 20 7946 0000' },
+  { icon: '📍', label: 'London Hub', detail: '15 Wigmore St, Marylebone, London W1U 1PF, United Kingdom' },
+  { icon: '📍', label: 'Tbilisi Operations', detail: 'MBBS & Nursing Specialists' },
+  { icon: '📧', label: 'Team', detail: 'intekhab@foreignedu.co' },
   { icon: '⏰', label: 'Hours', detail: 'Mon–Sat 9AM–6PM IST' },
 ];

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import useNavScroll from '../hooks/useNavScroll';
-import { NAV_LINKS } from '../constants/data';
+import { NAV_LINKS, SITE } from '../constants/data';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,7 +10,7 @@ export default function Navbar() {
     <>
       <nav className={`nav ${scrolled ? 'nav--scrolled' : 'nav--transparent'}`} style={{ height: 'var(--nav-height)' }}>
         <a href="#" className="nav__logo">
-          <div className="nav__crest" />
+          <img src={SITE.logo} alt={SITE.name} className="nav__logo-img" />
           <div className="nav__text">
             <strong>Foreign Education</strong>
             <span>Consultancy</span>
@@ -23,7 +23,8 @@ export default function Navbar() {
             </li>
           ))}
           <li>
-            <a href="#contact" className="btn btn--primary btn--sm">
+            <a href="#contact" className="btn btn--primary btn--sm nav__cta">
+              <span className="nav__cta-icon" aria-hidden>💬</span>
               Free Counselling
             </a>
           </li>
@@ -46,7 +47,8 @@ export default function Navbar() {
             {link.label}
           </a>
         ))}
-        <a href="#contact" className="btn btn--primary btn--sm" onClick={() => setIsOpen(false)}>
+        <a href="#contact" className="btn btn--primary btn--sm nav__cta" onClick={() => setIsOpen(false)}>
+          <span className="nav__cta-icon" aria-hidden>💬</span>
           Free Counselling
         </a>
       </div>

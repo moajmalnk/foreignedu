@@ -142,3 +142,7 @@
   gap: var(--space-3);
   flex-wrap: wrap;
 }
+@media (max-width: 560px) {
+  .btn { min-height: 44px; }
+  .btn--sm { padding: 10px 18px; min-height: 44px; }
+}
