@@ -33,30 +33,27 @@ export default function Footer() {
               <span className="footer__brand-name">{SITE.name}</span>
             </a>
             <p className="footer__tagline">{SITE.tagline}</p>
-            <div className="footer__addresses">
-              <div className="footer__addr">
-                <span className="footer__addr-label">{SITE.addresses[0].label}</span>
-                <span>{SITE.addresses[0].detail}, {SITE.addresses[0].line2}</span>
+            <div className="footer__brand-row">
+              <div className="footer__addresses">
+                <div className="footer__addr">
+                  <span className="footer__addr-label">{SITE.addresses[0].label}</span>
+                  <span>{SITE.addresses[0].detail}, {SITE.addresses[0].line2}</span>
+                </div>
+                <div className="footer__addr">
+                  <span className="footer__addr-label">{SITE.addresses[1].label}</span>
+                  <span>{SITE.addresses[1].detail}</span>
+                </div>
               </div>
-              <div className="footer__addr">
-                <span className="footer__addr-label">{SITE.addresses[1].label}</span>
-                <span>{SITE.addresses[1].detail}</span>
+              <div className="footer__social-wrap">
+                <span className="footer__social-label">Connect</span>
+                <div className="footer__social">
+                  {SOCIAL_LINKS.map((s) => (
+                    <a key={s.label} href={s.href} className="footer__social-icon" aria-label={s.label} target="_blank" rel="noopener noreferrer">
+                      {s.icon}
+                    </a>
+                  ))}
+                </div>
               </div>
-            </div>
-            <div className="footer__contact">
-              <span className="footer__contact-label">Contact</span>
-              <a href={`tel:${SITE.phone.replace(/\s/g, '')}`} className="footer__contact-item">
-                <span className="footer__contact-icon" aria-hidden>📞</span>
-                <span className="footer__contact-value">{SITE.phone}</span>
-              </a>
-              <a href={`mailto:${SITE.email}`} className="footer__contact-item">
-                <span className="footer__contact-icon" aria-hidden>✉</span>
-                <span className="footer__contact-value">{SITE.email}</span>
-              </a>
-              <a href={`mailto:${SITE.emails.intekhab}`} className="footer__contact-item">
-                <span className="footer__contact-icon" aria-hidden>✉</span>
-                <span className="footer__contact-value">{SITE.emails.intekhab}</span>
-              </a>
             </div>
           </div>
           <div className="footer__col">
@@ -75,15 +72,20 @@ export default function Footer() {
               ))}
             </ul>
           </div>
-          <div className="footer__social-wrap">
-            <span className="footer__social-label">Connect</span>
-            <div className="footer__social">
-              {SOCIAL_LINKS.map((s) => (
-                <a key={s.label} href={s.href} className="footer__social-icon" aria-label={s.label} target="_blank" rel="noopener noreferrer">
-                  {s.icon}
-                </a>
-              ))}
-            </div>
+          <div className="footer__contact-col">
+            <span className="footer__contact-label">Contact</span>
+            <a href={`tel:${SITE.phone.replace(/\s/g, '')}`} className="footer__contact-item">
+              <span className="footer__contact-icon" aria-hidden>📞</span>
+              <span className="footer__contact-value">{SITE.phone}</span>
+            </a>
+            <a href={`mailto:${SITE.email}`} className="footer__contact-item">
+              <span className="footer__contact-icon" aria-hidden>✉</span>
+              <span className="footer__contact-value">{SITE.email}</span>
+            </a>
+            <a href={`mailto:${SITE.emails.intekhab}`} className="footer__contact-item">
+              <span className="footer__contact-icon" aria-hidden>✉</span>
+              <span className="footer__contact-value">{SITE.emails.intekhab}</span>
+            </a>
           </div>
         </div>
         <div className="footer__bottom">
