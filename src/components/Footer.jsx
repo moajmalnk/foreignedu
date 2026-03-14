@@ -74,15 +74,15 @@ export default function Footer() {
                 <li key={d.id}><a href={d.learnMore}>{d.name}</a></li>
               ))}
             </ul>
-            <div className="footer__social-wrap">
-              <span className="footer__social-label">Connect</span>
-              <div className="footer__social">
-                {SOCIAL_LINKS.map((s) => (
-                  <a key={s.label} href={s.href} className="footer__social-icon" aria-label={s.label} target="_blank" rel="noopener noreferrer">
-                    {s.icon}
-                  </a>
-                ))}
-              </div>
+          </div>
+          <div className="footer__social-wrap">
+            <span className="footer__social-label">Connect</span>
+            <div className="footer__social">
+              {SOCIAL_LINKS.map((s) => (
+                <a key={s.label} href={s.href} className="footer__social-icon" aria-label={s.label} target="_blank" rel="noopener noreferrer">
+                  {s.icon}
+                </a>
+              ))}
             </div>
           </div>
         </div>

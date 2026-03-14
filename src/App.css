@@ -924,7 +924,10 @@
   transition: color var(--duration-fast);
 }
 .footer__col li a:hover { color: var(--gold-400); }
-.footer__social-wrap { margin-top: var(--space-6); }
+.footer__social-wrap {
+  grid-column: 1 / -1;
+  margin-top: var(--space-6);
+}
 .footer__social-label {
   font-size: 10px;
   font-weight: 700;
@@ -935,9 +938,12 @@
   display: block;
 }
 .footer__social {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
   gap: var(--space-2);
-  flex-wrap: wrap;
+}
+.footer__social .footer__social-icon {
+  grid-column: span 2;
 }
 .footer__social-icon {
   width: 40px;
@@ -1003,6 +1009,7 @@
   .footer__brand {
     grid-column: 1 / -1;
   }
+  .footer__social-wrap { grid-column: 1 / -1; }
   .footer__addr { font-size: 12px; padding: var(--space-3); }
   .footer__addr span { word-break: break-word; }
   .footer__contact-item { padding: var(--space-3); font-size: 13px; }
