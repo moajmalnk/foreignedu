@@ -1,44 +1,51 @@
-const testimonials = [
-  {
-    quote: 'The budget pathway for Latvia was explained so clearly. Starting from ₹3 lakhs, it was the perfect affordable pathway for us with zero false promises.',
-    name: 'Arjun K.',
-    role: 'Parent · Latvia Pathway 🇱🇻',
-    initial: 'A'
-  },
-  {
-    quote: 'Securing my MBBS seat in Georgia was a seamless experience. They provided honest, transparent guidance through every step of the visa process.',
-    name: 'Sneha Reddy',
-    role: 'MBBS Student · Georgia 🇬🇪',
-    initial: 'S'
-  },
-  {
-    quote: 'Transparent counselling is hard to find. Their student-first approach and budget guidance for Malta made my European dream a reality.',
-    name: 'Vikram Singh',
-    role: 'Masters Student · Malta 🇲🇹',
-    initial: 'V'
-  }
-];
+import useScrollReveal from '../hooks/useScrollReveal';
+import { TESTIMONIALS } from '../constants/data';
+
+function TestimonialCard({ quote, name, role, initial }) {
+  return (
+    <article className="card card--testimonial" style={{ alignSelf: 'stretch' }}>
+      <span className="testi-card__quote" aria-hidden>&ldquo;</span>
+      <div className="testi-card__stars" aria-hidden>
+        <span className="testi-card__star">★</span>
+        <span className="testi-card__star">★</span>
+        <span className="testi-card__star">★</span>
+        <span className="testi-card__star">★</span>
+        <span className="testi-card__star">★</span>
+      </div>
+      <p className="testi-card__text">{quote}</p>
+      <div className="testi-card__author">
+        <div className="testi-card__avatar">{initial}</div>
+        <div>
+          <span className="testi-card__name">{name}</span>
+          <span className="testi-card__role">{role}</span>
+        </div>
+      </div>
+    </article>
+  );
+}
 
 export default function Testimonials() {
+  const ref = useScrollReveal({ staggerChildren: 80 });
+
   return (
-    <section id="testimonials" className="testimonials-section">
+    <section id="testimonials" className="section section--cream">
       <div className="container">
-        <div className="tag">Student &amp; Parent Stories</div>
-        <h2 className="section-heading">Success Stories</h2>
-        <p className="section-sub">Real students, real results — honest guidance that changed lives.</p>
-        <div className="testimonials-grid">
-          {testimonials.map((t, i) => (
-            <div key={i} className="testi-card">
-              <div className="testi-quote">&ldquo;</div>
-              <blockquote>{t.quote}</blockquote>
-              <div className="testi-author">
-                <div className="testi-avatar">{t.initial}</div>
-                <div className="testi-author-info">
-                  <strong>{t.name}</strong>
-                  <span>{t.role}</span>
-                </div>
-              </div>
-            </div>
+        <div className="section-header section-header--center">
+          <span className="section-header__tag">Success Stories</span>
+          <h2 className="section-header__title">What Students <em>Say</em></h2>
+          <p className="section-header__sub">
+            Real experiences from students who chose Foreign Education Consultancy.
+          </p>
+        </div>
+        <div className="testimonials-grid stagger-children" ref={ref}>
+          {TESTIMONIALS.map((t) => (
+            <TestimonialCard
+              key={t.id}
+              quote={t.quote}
+              name={t.name}
+              role={t.role}
+              initial={t.initial}
+            />
           ))}
         </div>
       </div>

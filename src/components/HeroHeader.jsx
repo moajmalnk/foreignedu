@@ -1,22 +1,22 @@
 export default function HeroHeader() {
   return (
-    <div className="hero-header">
-      <div className="hero-header-inner animate">
-        <div className="hero-header-logo">
-          <div className="hero-header-logo-ring">
-            <div className="logo-inner">
-              <div className="logo-icon-row">📖 🎓</div>
-              <div className="logo-name">FOREIGN</div>
-              <div className="logo-bottom">🏛️ &nbsp; 🌾</div>
-              <div className="logo-banner" style={{ marginTop: '6px' }}>EDUCATION</div>
-            </div>
+    <header className="hero">
+      <div className="hero__card container">
+        <div className="hero__logo-wrap">
+          <div className="hero__logo">
+            <div className="hero__logo-row">♛</div>
+            <div className="hero__logo-row hero__logo-row--icons">📖 🎓</div>
+            <div className="hero__logo-divider" />
+            <div className="hero__logo-row hero__logo-row--icons">🏛️ 🌾</div>
+            <div className="hero__logo-ribbon">EDUCATION</div>
           </div>
         </div>
-        <div className="hero-header-text animate delay-1">
-          <h1>FOREIGN EDUCATION<br />CONSULTANCY</h1>
-          <div className="tagline">Navigate your future with us</div>
+        <div className="hero__content">
+          <h1 className="hero__title">Foreign Education Consultancy</h1>
+          <p className="hero__tagline">Navigate Your Future With Us</p>
         </div>
+        <div className="hero__blob" aria-hidden />
       </div>
-    </div>
+    </header>
   );
 }
