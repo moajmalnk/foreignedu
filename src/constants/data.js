@@ -4,17 +4,17 @@ export const SITE = {
   logo: '/favicon.png',
   tagline: 'Expert guidance for global education. Specializing in MBBS and Nursing program placements in Georgia, UK, Malta, and Latvia.',
   copyright: '© 2026 Foreign Education Consultancy. All Rights Reserved.',
-  phone: '+44 20 7946 0000',
-  email: 'info@foreignedu.co',
+  phone: '+9180887 87772',
+  email: 'info@foreigneducation.co',
   emails: {
-    general: 'info@foreignedu.co',
-    intekhab: 'intekhab@foreignedu.co',
+    general: 'info@foreigneducation.co',
+    intekhab: 'info@foreigneducation.co',
   },
   addresses: [
     { label: 'London Hub', detail: '15 Wigmore St, Marylebone', line2: 'London W1U 1PF, United Kingdom' },
     { label: 'Tbilisi Operations', detail: 'MBBS & Nursing Specialists' },
   ],
-  whatsapp: '442079460000',
+  whatsapp: '918088787772',
 };
 
 export const NAV_LINKS = [
@@ -190,10 +190,10 @@ export const GEORGIA_STATS = [
 ];
 
 export const CONTACT_ITEMS = [
-  { icon: '📧', label: 'Email', detail: 'info@foreignedu.co' },
-  { icon: '📞', label: 'Phone', detail: '+44 20 7946 0000' },
+  { icon: '📧', label: 'Email', detail: 'info@foreigneducation.co' },
+  { icon: '📞', label: 'Phone', detail: '+9180887 87772' },
   { icon: '📍', label: 'London Hub', detail: '15 Wigmore St, Marylebone, London W1U 1PF, United Kingdom' },
   { icon: '📍', label: 'Tbilisi Operations', detail: 'MBBS & Nursing Specialists' },
-  { icon: '📧', label: 'Team', detail: 'intekhab@foreignedu.co' },
+  { icon: '📧', label: 'Team', detail: 'info@foreigneducation.co' },
   { icon: '⏰', label: 'Hours', detail: 'Mon–Sat 9AM–6PM IST' },
 ];
